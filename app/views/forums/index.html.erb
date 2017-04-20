@@ -8,6 +8,7 @@
       <%= link_to 'New Forum', new_forum_path %>
     </div>
 
+
     <% @forums.each do |forum| %>
       <div class="row">
           <%= link_to forum.topic, forum %>
@@ -16,6 +17,7 @@
       <%= link_to 'Edit', edit_forum_path(forum), class: 'btn btn-info' %>
       <%= link_to 'Destroy', forum, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
       <hr />
+
     <% end %>
 
   </div>
