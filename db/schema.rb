@@ -14,20 +14,20 @@ ActiveRecord::Schema.define(version: 20170420052625) do
 
   create_table "forum_posts", force: :cascade do |t|
     t.text     "message"
-    t.integer  "user_id_id"
-    t.integer  "forum_id_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-    t.index ["forum_id_id"], name: "index_forum_posts_on_forum_id_id"
-    t.index ["user_id_id"], name: "index_forum_posts_on_user_id_id"
+    t.integer  "user_id"
+    t.integer  "forum_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["forum_id"], name: "index_forum_posts_on_forum_id"
+    t.index ["user_id"], name: "index_forum_posts_on_user_id"
   end
 
   create_table "forums", force: :cascade do |t|
     t.text     "topic"
-    t.integer  "user_id_id"
+    t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id_id"], name: "index_forums_on_user_id_id"
+    t.index ["user_id"], name: "index_forums_on_user_id"
   end
 
   create_table "genres", force: :cascade do |t|
@@ -44,21 +44,21 @@ ActiveRecord::Schema.define(version: 20170420052625) do
 
   create_table "playlists", force: :cascade do |t|
     t.string   "title"
-    t.integer  "user_id_id"
+    t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id_id"], name: "index_playlists_on_user_id_id"
+    t.index ["user_id"], name: "index_playlists_on_user_id"
   end
 
   create_table "songs", force: :cascade do |t|
     t.text     "title"
-    t.text     "artrist"
+    t.text     "artist"
     t.text     "description"
     t.integer  "year"
-    t.integer  "genre_id_id"
+    t.integer  "genre_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-    t.index ["genre_id_id"], name: "index_songs_on_genre_id_id"
+    t.index ["genre_id"], name: "index_songs_on_genre_id"
   end
 
   create_table "users", force: :cascade do |t|

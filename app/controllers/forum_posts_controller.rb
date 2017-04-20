@@ -69,6 +69,6 @@ class ForumPostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def forum_post_params
-      params.require(:forum_post).permit(:message, :user_id_id, :forum_id_id)
+      params.require(:forum_post).permit(:message, :user_id, :forum_id)
     end
 end
