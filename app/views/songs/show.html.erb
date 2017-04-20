@@ -6,8 +6,8 @@
 </p>
 
 <p>
-  <strong>Artist:</strong>
-  <%= @song.artist %>
+  <strong>Artrist:</strong>
+  <%= @song.artrist %>
 </p>
 
 <p>
@@ -18,6 +18,11 @@
 <p>
   <strong>Year:</strong>
   <%= @song.year %>
+</p>
+
+<p>
+  <strong>Genre:</strong>
+  <%= @song.genre_id %>
 </p>
 
 <%= link_to 'Edit', edit_song_path(@song) %> |

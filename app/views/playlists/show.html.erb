@@ -5,5 +5,10 @@
   <%= @playlist.title %>
 </p>
 
+<p>
+  <strong>User:</strong>
+  <%= @playlist.user_id %>
+</p>
+
 <%= link_to 'Edit', edit_playlist_path(@playlist) %> |
 <%= link_to 'Back', playlists_path %>
